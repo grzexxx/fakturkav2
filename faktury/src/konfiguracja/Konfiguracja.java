@@ -14,7 +14,8 @@ public class Konfiguracja {
 	///////////////////////////////////////
 
 	public IObliczCenePoRabacie getLiczarkaRabatu() {
-		return new ObliczCenaPoRabatKowtowy();
+	//	return new ObliczCenaPoRabatKowtowy();
+		return new AdapterRabatuKlasowy();
 
 	}
 	public double getKwotaRabatu(){
