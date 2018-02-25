@@ -7,7 +7,7 @@ public class ObliczCenaPoRabatProcentowy implements IObliczCenePoRabacie{
 	
 	@Override
 	public double obliczCenePoRabacie(double cena){
-		int procentRabatu = 20; //rabat 10zl
+		//int procentRabatu = 20; //rabat 10zl
 		cena = cena -cena*procentRabatu;
 		return cena;
 		

@@ -7,7 +7,7 @@ public class ObliczCenaPoRabatKowtowy implements IObliczCenePoRabacie{
 	
 	@Override
 	public double obliczCenePoRabacie(double cena){
-		int kwotaRabatu = 20; //rabat 10zl
+		//int kwotaRabatu = 20; //rabat 10zl
 		cena = cena - kwotaRabatu;
 		return cena;
 		
