@@ -2,6 +2,7 @@ package dokumenty;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Date;
+import konfiguracja.*;
 
 import magazyn.Towar;
 import rabaty.IObliczCenePoRabacie;
@@ -18,6 +19,8 @@ public class Faktura {
 	String kontrahent;
 	ArrayList<Pozycja> pozycje;
 	double suma;
+	
+	
 	IObliczCenePoRabacie rabat;
 	
 	public Faktura(Date dataSprzedazy,String kontrahent)
@@ -27,7 +30,8 @@ public class Faktura {
 		this.kontrahent=kontrahent;
 		pozycje=new ArrayList<Pozycja>();
 		suma=0;
-		rabat = new ObliczCenaPoRabatKowtowy();
+		rabat = Konfiguracja.getInstance().getLiczarkaRabatu();
+		//rabat = new ObliczCenaPoRabatKowtowy();
 	}
 	public void dodajPozycje(Towar towar, double ilosc)
 	{
